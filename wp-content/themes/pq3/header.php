@@ -70,6 +70,8 @@
 
 		<?php endif; ?>
 
+		
+
 <style>
 	
 <?php the_field( 'review_css','option'); ?>
@@ -82,23 +84,11 @@
 
 <?php the_field('analytics_code', 'option'); ?>
 
-
-<?php if (is_singular( 'landing_page' ) ) { // local scripts for Landing Page templates
-
-	the_field('header_scripts');
-
-} ?>
-
-
 </head>
 
 <body <?php body_class(); ?>>
 
-<?php if ( !is_singular( 'landing_page' ) ) { // need to place the header in a different area of the layout on single-landing_page.php
-
-	get_template_part('page-templates/includes/template','header');
-
-} ?>
-	
-
-
+<?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
+		
+		
+		
