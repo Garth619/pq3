@@ -1,4 +1,4 @@
-# Premium Quicklauch 3 - Theme Documentation
+# Premium Quicklaunch 3 - Theme Documentation
 
 ## SCSS Structure
 
