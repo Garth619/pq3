@@ -103,241 +103,183 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  createWaypoint("section_three", "#section_three", "visible", 550, null, true);
-  createWaypoint("section_four", "#section_four", "visible", 600, null, true);
-  createWaypoint("section_five", "#section_five", "visible", 400, null, true);
-  createWaypoint("section_six", "#section_six", "visible", 400, null, true);
-  createWaypoint("consultation", "footer", "visible", 300, null, true);
-  createWaypoint(
-    "about_bottom_wrapper",
-    "#about_bottom_wrapper",
-    "visible",
-    300,
-    null,
-    true
-  );
+  // createWaypoint("section-three", "#section-three", "visible", 550, null, true);
+  // createWaypoint("section-four", "#section-four", "visible", 600, null, true);
+  // createWaypoint("section-five", "#section-five", "visible", 400, null, true);
+  // createWaypoint("section-six", "#section-six", "visible", 400, null, true);
+  // createWaypoint("consultation", "footer", "visible", 300, null, true);
+  // createWaypoint(
+  //   "about-bottom-wrapper",
+  //   "#about-bottom-wrapper",
+  //   "visible",
+  //   300,
+  //   null,
+  //   true
+  // );
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
 
-  $(".preload_slider").on("init", function (event, slick) {
-    $(".preload_section").addClass("load_after");
+  $(".preload-slider").on("init", function (event, slick) {
+    $(".preload-section").addClass("load-after");
   });
 
-  $("#sec_one_slider").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    mobileFirst: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  $("#sec_two_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1169,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  $("#sec_four_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    adaptiveHeight: true,
-    arrows: true,
-    dots: false,
-    prevArrow: "#sec_four_left_arrow",
-    nextArrow: "#sec_four_right_arrow",
-  });
-
-  $("#logos_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: true,
-    dots: false,
-    prevArrow: "#logos_left_arrow",
-    nextArrow: "#logos_right_arrow",
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 1380,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 1695,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-        },
-      },
-    ],
-  });
-
-  $("#lp_sec_one_slider").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    mobileFirst: true,
-    arrows: false,
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  $("#lp_sec_two_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    adaptiveHeight: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      // {
-      //   breakpoint: 1170,
-      //   settings: "unslick",
-      // },
-    ],
-  });
-
-  $("#lp_sec_four_slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1170,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  /* Landing Page
---------------------------------------------------------------------------------------- */
-
-  // var macyInstance = Macy({
-  //   container: "#lp_sec_five_bullets",
-  //   columns: 2,
-  //   margin: 49,
-  //   breakAt: {
-  //     768: 1,
-  //   },
+  // $("#sec_one_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1170,
+  //       settings: "unslick",
+  //     },
+  //   ],
   // });
 
-  /* Case Results Page
---------------------------------------------------------------------------------------- */
+  // $("#sec_two_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1169,
+  //       settings: "unslick",
+  //     },
+  //   ],
+  // });
 
-  // mimic select dropdown when you click the top the dropdown part slides down
+  // $("#sec_four_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   adaptiveHeight: true,
+  //   arrows: true,
+  //   dots: false,
+  //   prevArrow: "#sec_four_left_arrow",
+  //   nextArrow: "#sec_four_right_arrow",
+  // });
 
-  $("#select_input").on("click", function (e) {
-    $(this).next("#select_dropdown").toggleClass("open");
-  });
+  // $("#logos_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   arrows: true,
+  //   dots: false,
+  //   prevArrow: "#logos_left_arrow",
+  //   nextArrow: "#logos_right_arrow",
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1380,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1695,
+  //       settings: {
+  //         slidesToShow: 5,
+  //         slidesToScroll: 5,
+  //       },
+  //     },
+  //   ],
+  // });
 
-  // when you click on a list item you want, this gets the text() info then traverses to the top and replaces the text with the new text
+  // $("#lp_sec_one_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   dots: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1170,
+  //       settings: "unslick",
+  //     },
+  //   ],
+  // });
 
-  $("#select_dropdown_inner ul li").on("click", function (e) {
-    // gets text
+  // $("#lp_sec_two_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   adaptiveHeight: true,
+  //   arrows: false,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     // {
+  //     //   breakpoint: 1170,
+  //     //   settings: "unslick",
+  //     // },
+  //   ],
+  // });
 
-    var caseresultstext = $(this).text();
-
-    // takes the text and climbs back up to the top and replaces the text with the new text, there is probably cleaner ways to do this haha
-
-    $(this)
-      .closest("#select_dropdown_inner")
-      .parent()
-      .prev("#select_input")
-      .find("span")
-      .replaceWith(
-        "<span id='select_input_title'>" + caseresultstext + "<span>"
-      );
-
-    // then the dropdown slides back up
-
-    $("#select_dropdown").removeClass("open");
-  });
-
-  // this mimics the way a select dropdown closes when you decide not to choose an option but just click outside of the select, the dropdown slides back up too
-
-  $(document).click(function (e) {
-    var container = $("#select_dropdown_wrapper");
-
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $("#select_dropdown").removeClass("open");
-    }
-  });
-
-  if ($(".tax-case_results_category").length) {
-    $("li.case_results_item").addClass("current-menu-item");
-  }
+  // $("#lp_sec_four_slider").slick({
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   mobileFirst: true,
+  //   arrows: false,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 767,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1170,
+  //       settings: "unslick",
+  //     },
+  //   ],
+  // });
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
@@ -350,20 +292,9 @@ jQuery(document).ready(function ($) {
     window.history.back();
   }
 
-  $("span.go_back").on("click", function (e) {
+  $("span.go-back").on("click", function (e) {
     goBack();
   });
-
-  /* Red Double Line Styling Insert
---------------------------------------------------------------------------------------- */
-
-  $('<span class="double_line"></span>').insertAfter(".widget h3");
-
-  //$('<span class="double_line blockquote"></span>').insertBefore("blockquote");
-
-  $('<span class="double_line"></span>').insertAfter(
-    "ul.pa_directory_top_menu > li > a"
-  );
 
   /* Sidebar Current Class for Blog Sidebars
 --------------------------------------------------------------------------------------- */
@@ -372,12 +303,12 @@ jQuery(document).ready(function ($) {
 
   var pgurl = window.location.href;
 
-  $(".sidebar_box.sidebar_blog ul li").each(function () {
+  $(".sidebar-box.sidebar-blog ul li").each(function () {
     if ($(this).find("a").attr("href") == pgurl)
       $(this).addClass("blog-active");
   });
 
-  $(".sidebar_box ul.menu > li.menu-item-has-children > a").on(
+  $(".sidebar-box ul.menu > li.menu-item-has-children > a").on(
     "click",
     function (e) {
       $(this).next("ul.sub-menu").slideToggle(300);
@@ -396,25 +327,25 @@ jQuery(document).ready(function ($) {
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
   $("#menu_wrapper").on("click", function (e) {
-    $("#header_right").toggleClass("open");
+    $("#header-right").toggleClass("open");
 
     $("nav").slideToggle(400);
   });
 
   function navDesktop() {
-    $("header nav").addClass("nav_desktop");
+    $("header nav").addClass("nav-desktop");
 
     $("header nav li.menu-item-has-children > a")
       .next("ul.sub-menu")
       .removeClass("open");
 
-    $("header nav").removeClass("nav_tablet");
+    $("header nav").removeClass("nav-tablet");
   }
 
   function navTablet() {
-    $("header nav").removeClass("nav_desktop");
+    $("header nav").removeClass("nav-desktop");
 
-    $("header nav").addClass("nav_tablet");
+    $("header nav").addClass("nav-tablet");
   }
 
   function tabletClick() {

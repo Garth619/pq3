@@ -1,36 +1,34 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div id='single_post'>
+<div id='single-post'>
 
 <?php if(get_field('banner_h1') == "Yes") : ?>
 			
-			<h2 class="blog_header"><?php the_title();?></h2>
+			<h2 class="blog-header"><?php the_title();?></h2>
 		
 		<?php else:?>
 		
-		<h1 class="blog_header"><?php the_title();?></h1>
+		<h1 class="blog-header"><?php the_title();?></h1>
 		
 		<?php endif;?>
-
-		<span class='double_line'></span><!-- double_line -->
 		
-		<div class="blog_meta">
+		<div class="blog-meta">
 		
 			<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?> in</span>
 			
 			<?php echo get_the_category_list();?>
 		
-		</div><!-- blog_meta -->
+		</div><!-- blog-meta -->
 		
-		<div class="blog_content content">
+		<div class="blog-content content">
 			
 			<?php the_content();?>
 		
-		</div><!-- blog_content -->
+		</div><!-- blog-content -->
 			
 		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	
-	</div><!-- single_post -->
+	</div><!-- single-post -->
 
 <?php endwhile; // end of loop ?>
 
