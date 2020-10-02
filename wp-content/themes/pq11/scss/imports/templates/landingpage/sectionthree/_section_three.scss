@@ -1,0 +1,168 @@
+#lp_section_three {
+  padding: 56px 24px 37px;
+  @include mq(small_tablet) {
+    padding: 79px 60px 71px;
+  }
+  @include mq(large_laptop) {
+    padding: 89px 105px 71px;
+  }
+  @include mq(small_monitor) {
+    padding: 117px 105px 71px;
+  }
+}
+
+#lp_sec_three_inner {
+  max-width: 970px;
+  margin: 0 auto;
+  span.double_line {
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
+}
+
+#lp_sec_three_content {
+  margin-top: 27px;
+  @include mq(small_tablet) {
+    margin-top: 47px;
+  }
+}
+
+#lp_sec_three_info {
+  max-width: 260px;
+  margin: 55px auto 50px;
+  text-align: center;
+  @include mq(small_tablet) {
+    max-width: 775px;
+    @include flex();
+  }
+  @include mq(small_laptop) {
+    margin: 80px auto;
+  }
+  @include mq(large_laptop) {
+    max-width: 950px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1020px;
+  }
+  span.double_line {
+    max-width: 73px;
+    margin: 0 auto 15px;
+    @include mq(small_tablet) {
+      margin: 0 0 15px;
+    }
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
+}
+
+#lp_sec_three_info_image {
+  flex-shrink: 0;
+  flex-basis: 311px;
+  position: relative;
+  @include mq(small_laptop) {
+    flex-basis: 381px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 410px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 455px;
+  }
+  img {
+    @include mq(small_tablet) {
+      object-fit: cover;
+      @include box(100%);
+      @include abs(0, null, null, 0);
+    }
+  }
+}
+
+html.webp {
+  #lp_sec_three_info_text {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #lp_sec_three_info_text {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
+#lp_sec_three_info_text {
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+  @include mq(small_tablet) {
+    padding: 0 28px 7px;
+    text-align: left;
+  }
+  @include mq(small_laptop) {
+    padding: 0 40px 37px;
+  }
+  &:after {
+    @include mq(small_tablet) {
+      background-size: (500px, 500px);
+      opacity: 0.53;
+      @include abs(0, null, null, 0);
+      @include box(100%, 100%);
+      @include contentdisplay();
+    }
+  }
+}
+
+#lp_sec_three_info_text_inner {
+  position: relative;
+  z-index: 1;
+}
+
+span#lp_sec_three_info_title {
+  display: block;
+  margin: 35px auto 15px;
+  @include type(
+    (
+      size: 12px,
+      height: 15px,
+      spacing: 1.8px,
+      family: $primaryfont,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_laptop) {
+    font-size: 14px;
+    margin: 53px 0 15px 0px;
+  }
+  @include mq(small_monitor) {
+    margin: 61px 0 15px 0px;
+  }
+}
+
+#lp_sec_three_info_caption {
+  @include type(
+    (
+      size: 18px,
+      height: 25px,
+      family: $secondaryfont,
+      color: $color_dark_three,
+      weight: 700,
+    )
+  );
+  @include mq(small_laptop) {
+    @include quick_type(20px, 28px, null);
+  }
+  @include mq(large_laptop) {
+    @include quick_type(22px, 30px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(26px, 35px, null);
+  }
+}

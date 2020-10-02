@@ -1,0 +1,158 @@
+.button {
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  z-index: 1;
+  &:hover {
+    span {
+      color: $button_color_hover;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:before,
+  &:after {
+    border-radius: 50px;
+    z-index: -1;
+    @include contentdisplay();
+    @include box(100%);
+    @include abs(0, null, null, 0);
+  }
+  &:before {
+    background: $button_bg_color;
+  }
+  &:after {
+    background: $button_bg_color_hover;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+  span {
+    display: block;
+    z-index: 1;
+    text-align: center;
+    padding: 15px;
+    @include type(
+      (
+        size: $button_size,
+        family: $secondaryfont,
+        color: $button_color,
+        weight: $button_weight,
+        transform: lowercase,
+      )
+    );
+    @include mq(small_tablet) {
+      font-size: $button_size_small_tablet;
+      padding: 17px 19px;
+    }
+  }
+}
+
+.button_two {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid $button_two_border_color;
+  padding: 16px 27px;
+  border-radius: 50px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: $button_two_size,
+      family: $primaryfont,
+      color: $button_two_color,
+      weight: $button_two_weight,
+      spacing: $button_two_spacing,
+      transform: uppercase,
+    )
+  );
+  @include mq(large_laptop) {
+    padding: 17px 46px;
+    font-size: $button_two_size_large_laptop;
+  }
+  @include mq(small_monitor) {
+    border: 3px solid $button_two_border_color;
+    padding: 17px 24px;
+    @include quick_type(
+      $button_two_size_small_monitor,
+      null,
+      $button_two_spacing_small_monitor
+    );
+  }
+  &:hover {
+    background: $button_two_bg_color_hover;
+    color: $button_two_color_hover;
+  }
+}
+
+.play_button {
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  @include flex(center, center);
+  @include box(52px);
+  @include mq(small_tablet) {
+    @include box(68px);
+  }
+  @include mq(small_laptop) {
+    @include box(60px);
+  }
+  @include mq(small_monitor) {
+    @include box(90px);
+  }
+  &:before,
+  &:after {
+    transition: all 200ms ease-in-out;
+    @include contentdisplay();
+  }
+  &:before {
+    border-radius: 50%;
+    background: $play_button_bg_color;
+    @include box(42px);
+    @include mq(small_tablet) {
+      @include box(55px);
+    }
+    @include mq(small_laptop) {
+      @include box(45px);
+    }
+    @include mq(small_monitor) {
+      @include box(75px);
+    }
+  }
+  &:after {
+    @include abs(16px, null, null, 20px);
+    @include tri(right, 8px, 12px, $play_button_tri_bg_color);
+    @include mq(small_tablet) {
+      @include abs(19px, null, null, 26px);
+      @include tri(right, 12px, 16px, $play_button_tri_bg_color);
+    }
+    @include mq(small_laptop) {
+      @include abs(19px, null, null, 24px);
+      @include tri(right, 9px, 12px, $play_button_tri_bg_color);
+    }
+    @include mq(small_monitor) {
+      @include abs(32px, null, null, 38px);
+      @include tri(right, 12px, 16px, $play_button_tri_bg_color);
+    }
+  }
+}
+
+.video_hover_styles {
+  overflow: hidden;
+  img {
+    transition: all 900ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .play_button {
+      &:before {
+        background: $play_button_bg_color_hover;
+      }
+      &:after {
+        border-left-color: $play_button_tri_bg_color_hover !important;
+      }
+    }
+  }
+}

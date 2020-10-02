@@ -1,0 +1,98 @@
+////////////////////////////////////////////////////////////////////
+// Footer
+////////////////////////////////////////////////////////////////////
+
+// .footer
+
+$footer_bg_color: $color_dark_three;
+
+$footer_border_bg_color: $color_bright_two;
+
+// .footer_form_wrapper span.double_line:before, &:after
+
+$footer_double_line_bg_color: $color_bright_one;
+
+// #footer_form_wrapper ul li:after
+
+$footer_asterisk_size: 23px;
+
+$footer_asterisk_bg_color: $color_bright_one;
+
+// #footer_form_wrapper ul li input, textarea, select
+
+$footer_input_size: 14px;
+$footer_input_size_small_tablet: 13px;
+$footer_input_size_small_monitor: 15px;
+
+$footer_input_spacing: 0.7px;
+$footer_input_spacing_small_tablet: 0.65px;
+$footer_input_spacing_small_monitor: 0.75px;
+
+$footer_input_color: $color_dark_two;
+
+// #footer_form_wrapper .gform_footer input
+
+$footer_submit_color: $color_light_one;
+
+$footer_submit_color_hover: $color_bright_one;
+
+$footer_submit_size: 20px;
+$footer_submit_size_small_tablet: 18px;
+$footer_submit_size_small_monitor: 24px;
+
+// #footer_form_wrapper .gform_footer:before
+
+$footer_submit_bg_color: $color_grad_one;
+
+// #footer_form_wrapper .gform_footer:after
+
+$footer_submit_bg_color_hover: $color_light_one;
+
+// .gfield_description, .validation_message
+
+$footer_error_size: 10px;
+
+$footer_error_spacing: 1.8px;
+
+$footer_error_height: 12px;
+
+$footer_error_color: $color_bright_one;
+
+$footer_error_weight: 700;
+
+//  span.required
+
+$footer_required_size: 11px;
+$footer_required_size_small_monitor: 15px;
+
+$footer_required_spacing: 1.1px;
+
+//  span.required:before
+
+$footer_required_asterisk_size: 20px;
+
+$footer_required_asterisk_size_small_monitor: 30px;
+
+// span#footer_from_title
+
+$footer_from_title_size: 35px;
+$footer_from_title_size_large_laptop: 45px;
+$footer_from_title_size_small_monitor: 60px;
+
+$footer_from_title_height: 50px;
+$footer_from_title_height_large_laptop: 60px;
+
+$footer_from_title_color: $color_light_one;
+
+$footer_from_title_weight: 500;
+
+// #copyright_inner ul li
+
+$copyright_size: 10px;
+$copyright_size_small_monitor: 13px;
+
+$copyright_spacing: 1px;
+
+$copyright_height: 20px;
+
+$copyright_color: $color_light_one;

@@ -1,0 +1,110 @@
+html.webp {
+  #lp_section_six {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #lp_section_six {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
+#lp_section_six {
+  position: relative;
+  padding: 60px 25px 40px;
+  @include mq(small_tablet) {
+    padding: 90px 60px 68px;
+  }
+  @include mq(large_laptop) {
+    padding: 90px 90px 68px;
+  }
+  &:after {
+    background-size: (500px, 500px);
+    opacity: 0.53;
+    @include abs(0, null, null, 0);
+    @include box(100%, 100%);
+    @include contentdisplay();
+  }
+}
+
+#lp_sec_six_inner {
+  position: relative;
+  z-index: 1;
+  @include mq(small_monitor) {
+    max-width: 960px;
+    @include margin_lr;
+  }
+  span.double_line {
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
+}
+
+#lp_sec_six_img_wrapper {
+  max-width: 510px;
+  @include margin_lr;
+  @include mq(small_laptop) {
+    max-width: 610px;
+  }
+  @include mq(small_monitor) {
+    max-width: 690px;
+  }
+  img {
+    border: 18px solid $color_light_one;
+    @include image();
+    @include mq(small_tablet) {
+      border: 21px solid $color_light_one;
+    }
+    @include mq(small_laptop) {
+      border: 28px solid $color_light_one;
+    }
+  }
+  span.double_line {
+    max-width: 76px;
+    margin: 25px auto 0;
+    @include mq(small_tablet) {
+      margin: 25px 0 0;
+    }
+    @include mq(small_laptop) {
+      margin: 31px 0 0;
+    }
+  }
+}
+
+#lp_sec_six_descrip {
+  text-align: center;
+  margin-top: 22px;
+  @include type(
+    (
+      size: 25px,
+      height: 30px,
+      family: $secondaryfont,
+      weight: 500,
+    )
+  );
+  @include mq(small_tablet) {
+    text-align: left;
+    @include quick_type(30px, 35px, null);
+  }
+  @include mq(small_laptop) {
+    @include quick_type(35px, 40px, null);
+  }
+  @include mq(small_monitor) {
+    margin-top: 29px;
+    @include quick_type(40px, 45px, null);
+  }
+}
+
+#lp_sec_six_inner_content {
+  margin-top: 55px;
+  @include mq(small_tablet) {
+    margin-top: 78px;
+  }
+}

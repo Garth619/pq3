@@ -1,0 +1,448 @@
+.sidebar_wrapper {
+  padding: 27px 0 0 0;
+  margin-bottom: -55px;
+  @include mq(small_tablet) {
+    padding: 55px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    width: 270px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  @include mq(large_laptop) {
+    width: 312px;
+  }
+  @include mq(small_monitor) {
+    width: 480px;
+    margin-top: 34px;
+  }
+}
+
+.sidebar_form {
+  display: none;
+  background: $sidebar_form_bg_color;
+  padding: 26px 33px 92px 33px;
+  text-align: center;
+  margin-bottom: 20px;
+  @include mq(small_laptop) {
+    display: block;
+  }
+  @include mq(large_laptop) {
+    margin-bottom: 30px;
+    padding: 37px 33px 121px 33px;
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 40px;
+    padding: 51px 33px 121px 33px;
+  }
+  span.double_line {
+    max-width: 85px;
+    @include margin_lr;
+  }
+  ul {
+    list-style: none;
+    margin-top: 23px;
+    @include mq(small_monitor) {
+      margin-top: 37px;
+    }
+    li {
+      margin-bottom: 7px;
+      flex-basis: 100%;
+      position: relative;
+      @include mq(large_laptop) {
+        margin-bottom: 12px;
+      }
+      &:after {
+        @include abs(18px, 13px, null, null);
+        @include contentdisplay(block, "*");
+        @include type(
+          (
+            size: $sidebar_form_asterisk_size,
+            family: $primaryfont,
+            color: $sidebar_form_asterisk_color,
+          )
+        );
+        @include mq(large_laptop) {
+          font-size: $sidebar_form_asterisk_size_large_laptop;
+        }
+        @include mq(small_monitor) {
+          font-size: $sidebar_form_asterisk_size_small_monitor;
+          top: 23px;
+        }
+      }
+      label {
+        display: none;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        background: $sidebar_form_input_bg_color;
+        border-radius: 4px;
+        border: none;
+        padding: 13px 30px 13px 15px;
+        @include type(
+          (
+            size: $sidebar_form_input_size,
+            spacing: $sidebar_form_input_spacing,
+            color: $sidebar_form_input_color,
+            family: $primaryfont,
+          )
+        );
+        @include mq(large_laptop) {
+          padding: 15px 40px 15px 20px;
+          font-size: $sidebar_form_input_size_large_laptop;
+        }
+        @include mq(small_monitor) {
+          padding: 20px 40px 20px 20px;
+          @include quick_type(
+            $sidebar_form_input_size_small_monitor,
+            null,
+            $sidebar_form_input_small_monitor
+          );
+        }
+      }
+      textarea {
+        @include mq(small_laptop) {
+          height: 88px;
+        }
+        @include mq(large_laptop) {
+          height: 121px;
+        }
+      }
+      select {
+        -webkit-appearance: none;
+      }
+    }
+  }
+  .gform_footer {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 27px;
+    @include mq(large_laptop) {
+      margin-top: 30px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 40px;
+    }
+    &:hover {
+      input {
+        color: $color_bright_one;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:before,
+    &:after {
+      border-radius: 50px;
+      z-index: -1;
+      @include contentdisplay();
+      @include box(100%);
+      @include abs(0, null, null, 0);
+    }
+    &:before {
+      background: $sidebar_form_submit_bg_color;
+    }
+    &:after {
+      background: $sidebar_form_submit_bg_color_hover;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+    input {
+      background: transparent;
+      border: none;
+      padding: 13px 25px;
+      cursor: pointer;
+      @include type(
+        (
+          size: $sidebar_form_submit_size,
+          family: $secondaryfont,
+          color: $sidebar_form_submit_color,
+          transform: lowercase,
+        )
+      );
+      @include mq(small_monitor) {
+        font-size: $sidebar_form_submit_small_monitor;
+        padding: 15px 35px;
+      }
+    }
+  }
+  .gfield_description,
+  .validation_message {
+    margin-top: 3px;
+    @include type(
+      (
+        size: $sidebar_form_error_size,
+        spacing: $sidebar_form_error_spacing,
+        height: $sidebar_form_error_height,
+        family: $primaryfont,
+        color: $sidebar_form_error_color,
+        weight: $sidebar_form_error_weight,
+        align: left,
+        transform: uppercase,
+      )
+    );
+  }
+  #validation_message_3_3 {
+    display: none; // hide "this field is required on the phone input bc thers is no room. "Phone Format" is left there
+  }
+  span.required {
+    text-align: left;
+    margin-top: -75px;
+    @include quick_type(
+      $sidebar_form_required_size,
+      null,
+      $sidebar_form_required_spacing
+    );
+    @include mq(large_laptop) {
+      margin-top: -77px;
+      font-size: $sidebar_form_required_size_large_laptop;
+    }
+    @include mq(small_monitor) {
+      margin-top: -98px;
+      @include quick_type(
+        $sidebar_form_required_size_small_monitor,
+        null,
+        null
+      );
+    }
+    &:before {
+      font-size: $sidebar_form_required_asterisk_size;
+      margin-top: 0px;
+      margin-right: 2px;
+      @include mq(large_laptop) {
+        margin-right: 10px;
+        font-size: $sidebar_form_required_asterisk_size_large_laptop;
+      }
+      @include mq(small_monitor) {
+        font-size: $sidebar_form_required_asterisk_size_small_monitor;
+      }
+    }
+  }
+}
+
+span.sidebar_form_title {
+  display: block;
+  margin-bottom: 13px;
+  @include type(
+    (
+      size: $sidebar_form_title_size,
+      height: $sidebar_form_title_height,
+      family: $secondaryfont,
+      color: $sidebar_form_title_color,
+      weight: $sidebar_form_title_weight,
+      align: center,
+      transform: capitalize,
+    )
+  );
+  @include mq(large_laptop) {
+    @include quick_type(
+      $sidebar_form_title_size_large_laptop,
+      $sidebar_form_title_height_large_laptop,
+      null
+    );
+  }
+  @include mq(small_monitor) {
+    margin-bottom: 23px;
+    @include quick_type(
+      $sidebar_form_title_size_small_monitor,
+      $sidebar_form_title_height_small_monitor,
+      null
+    );
+  }
+}
+
+.widget {
+  position: relative;
+  width: 100vw;
+  margin-left: -35px;
+  text-align: center;
+  padding: 45px 0 15px 0;
+  @include mq(small_tablet) {
+    padding: 45px 0 25px 0;
+    margin-left: -60px;
+  }
+  @include mq(small_laptop) {
+    width: auto;
+    margin: 0;
+    text-align: left;
+    padding: 25px 0px 10px;
+  }
+  @include mq(large_laptop) {
+    padding: 45px 0px 10px;
+  }
+  @include mq(small_monitor) {
+    padding: 57px 0px 36px;
+  }
+  &:before {
+    background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    opacity: 0.6;
+    @include abs(0, null, null, 0);
+    @include box(100%);
+    @include contentdisplay();
+  }
+  h3,
+  span.double_line,
+  ul {
+    position: relative;
+    z-index: 1;
+  }
+  h3 {
+    padding-bottom: 10px;
+    @include type(
+      (
+        size: $sidebar_h3_size,
+        height: $sidebar_h3_height,
+        family: $secondaryfont,
+        weight: $sidebar_h3_weight,
+      )
+    );
+    @include mq(small_laptop) {
+      font-size: $sidebar_h3_size_small_laptop;
+      padding: 0 40px 10px;
+    }
+    @include mq(large_laptop) {
+      font-size: $sidebar_h3_size_large_laptop;
+    }
+    @include mq(small_monitor) {
+      font-size: $sidebar_h3_size_small_monitor;
+      padding-bottom: 17px;
+    }
+  }
+  span.double_line {
+    max-width: 73px;
+    @include margin_lr;
+    @include mq(small_laptop) {
+      margin-left: 40px;
+      margin-right: 0;
+    }
+    @include mq(large_laptop) {
+      max-width: 126px;
+    }
+    @include mq(small_monitor) {
+      max-width: 163px;
+    }
+    &:before,
+    &:after {
+      background: $sidebar_double_line_bg_color;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      @include type(
+        (
+          size: $sidebar_size,
+          height: $sidebar_height,
+          family: $primaryfont,
+          weight: $sidebar_weight,
+        )
+      );
+      @include mq(small_laptop) {
+        font-size: $sidebar_size_small_laptop;
+      }
+      @include mq(large_laptop) {
+        font-size: $sidebar_size_large_laptop;
+      }
+      @include mq(small_monitor) {
+        font-size: $sidebar_size_small_monitor;
+      }
+      a {
+        color: $sidebar_color;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $sidebar_color_hover;
+        }
+      }
+    }
+  }
+  ul.menu {
+    margin-top: 31px;
+    @include mq(small_laptop) {
+      margin-top: 26px;
+    }
+    @include mq(small_monitor) {
+      margin-top: 30px;
+    }
+    > li {
+      > a {
+        display: block;
+        margin-bottom: 22px;
+        @include mq(small_laptop) {
+          margin-bottom: 18px;
+          padding: 0 40px;
+        }
+        @include mq(small_monitor) {
+          margin-bottom: 34px;
+        }
+      }
+    }
+    > li.menu-item-has-children {
+      &.active {
+        > a {
+          color: $sidebar_active_color;
+        }
+      }
+      > a {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        &:after {
+          @include abs(5px, -16px, null, null);
+          @include contentdisplay();
+          @include tri(down, 4px, 5px, $sidebar_tri_active_color);
+          @include mq(small_laptop) {
+            top: -1px;
+            right: -12px;
+            position: relative;
+            display: inline-block;
+          }
+          @include mq(small_monitor) {
+            @include tri(down, 6px, 6px, $sidebar_tri_active_color);
+          }
+        }
+      }
+    }
+    > li.current-menu-ancestor {
+      > a {
+        color: $sidebar_current_menu_ancestor_color;
+      }
+      > ul.sub-menu {
+        display: block;
+      }
+    }
+  }
+  ul.sub-menu {
+    background: $sidebar_submenu_bg_color;
+    padding: 25px 0 1px 0;
+    margin: -5px 0 35px 0;
+    display: none;
+    @include mq(small_laptop) {
+      margin: -5px 0 29px 0;
+    }
+    @include mq(small_monitor) {
+      margin: -9px 0 23px 0;
+    }
+    li {
+      margin-bottom: 25px;
+      font-weight: $sidebar_submenu_weight;
+      @include mq(small_laptop) {
+        margin-bottom: 20px;
+      }
+      @include mq(small_monitor) {
+        font-size: $sidebar_submenu_size_small_monitor;
+      }
+      a {
+        padding: 0 40px;
+      }
+      &.current-menu-item {
+        > a {
+          color: $sidebar_submenu_current_menu_item_color;
+        }
+      }
+    }
+  }
+}

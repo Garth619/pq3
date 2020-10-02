@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////
+// Contact Page
+////////////////////////////////////////////////////////////////////
+
+// #contact_wrapper
+
+$contact_wrapper_bg_color: $color_light_one;
+
+//  span, a.loc_phone
+
+$contact_loc_phone: $color_dark_three;
+
+// span.loc_descrip
+
+$contact_loc_descrip_size: 24px;
+
+// a.get_directions
+
+$contact_get_directions_color: $color_bright_two;
+
+$contact_get_directions_bg_color: $color_bright_two;
+
+$contact_get_directions_bg_color_small_monitor: $color_bright_two;
+
+// a.get_directions:hover
+
+$contact_get_directions_bg_color_hover: $color_bright_two;
+
+$contact_get_directions_color_hover: $color_light_one;
+
+$contact_get_directions_border_bg_color_hover: $color_bright_two;
+
+// contact .social_media a svg path
+
+$contact_social_media_bg_color: $color_dark_three;
+
+// contact .social_media a svg path:hover
+
+$contact_social_media_bg_color_hover: $color_bright_one;

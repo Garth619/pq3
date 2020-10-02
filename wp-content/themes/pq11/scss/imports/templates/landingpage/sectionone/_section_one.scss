@@ -1,0 +1,277 @@
+#lp_section_one {
+  position: relative;
+  padding: 25px 0 45px;
+  text-align: center;
+  @include mq(small_tablet) {
+    padding: 35px 0 45px;
+  }
+  @include mq(large_laptop) {
+    padding: 41px 0 73px;
+  }
+}
+
+#lp_section_one_inner {
+  position: relative;
+  z-index: 1;
+}
+
+img#lp_hero {
+  object-fit: cover;
+  object-position: center center;
+  @include image();
+  @include box(100%);
+  @include abs(0, null, null, 0);
+}
+
+#lp_sec_one_video {
+  border: 7px solid $sec_one_video_border_bg_color;
+  position: relative;
+  @include margin_lr;
+  @include box(141px, 89px);
+  @include mq(small_tablet) {
+    @include box(195px, 121px);
+  }
+  @include mq(large_laptop) {
+    @include box(199px, 121px);
+  }
+  @include mq(small_monitor) {
+    @include box(250px, 150px);
+  }
+  a {
+    display: block;
+  }
+  img {
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+    @include image();
+    @include box(100%);
+  }
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
+}
+
+span#lp_sec_one_title {
+  display: block;
+  margin: 23px auto 0;
+  max-width: 285px;
+  text-align: center;
+  @include type(
+    (
+      size: $sec_one_title_size,
+      height: $sec_one_title_height,
+      family: $secondaryfont,
+      color: $sec_one_title_color,
+      weight: $sec_one_title_weight,
+    )
+  );
+  @include mq(small_tablet) {
+    max-width: 496px;
+    margin: 25px auto 0;
+    @include quick_type(
+      $sec_one_title_size_small_tablet,
+      $sec_one_title_height_small_tablet,
+      null
+    );
+  }
+  @include mq(tablet) {
+    max-width: 600px;
+  }
+  @include mq(small_laptop) {
+    order: 2;
+    max-width: 660px;
+    margin: 25px auto 27px;
+    @include quick_type(60px, 60px, null);
+  }
+  @include mq(large_laptop) {
+    max-width: 865px;
+    margin: 26px auto 33px;
+    @include quick_type(80px, 80px, null);
+  }
+  @include mq(small_monitor) {
+    @include quick_type(
+      $sec_one_title_size_small_monitor,
+      $sec_one_title_height_small_monitor,
+      null
+    );
+  }
+  @include mq(monitor) {
+    @include quick_type(
+      $sec_one_title_size_monitor,
+      $sec_one_title_height_monitor,
+      null
+    );
+  }
+}
+
+ul#lp_sec_one_selling_points {
+  list-style: none;
+  display: block;
+  margin: 13px auto 0;
+  text-align: center;
+  max-width: 310px;
+  @include mq(small_tablet) {
+    margin-top: 15px;
+    max-width: 580px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 27px;
+    max-width: 765px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 36px;
+  }
+  li {
+    position: relative;
+    display: inline;
+    @include type(
+      (
+        size: 10px,
+        spacing: 1.5px,
+        height: 23px,
+        family: $primaryfont,
+        color: $sec_one_selling_points_color,
+        weight: $sec_one_selling_points_weight,
+        align: left,
+        transform: uppercase,
+      )
+    );
+    @include mq(small_tablet) {
+      display: inline-block;
+      font-size: 11px;
+    }
+    @include mq(large_laptop) {
+      @include quick_type(
+        14px,
+        null,
+        $sec_one_selling_points_spacing_large_laptop
+      );
+    }
+    @include mq(small_monitor) {
+      margin-bottom: 18px;
+      @include quick_type(
+        $sec_one_selling_points_size_small_monitor,
+        null,
+        null
+      );
+    }
+    &:after {
+      border-radius: 50%;
+      vertical-align: top;
+      margin: 9px 10px 0;
+      display: none;
+      background: $sec_one_selling_points_bullet_bg_color;
+      @include box(5px);
+      @include contentdisplay(none);
+      @include mq(small_tablet) {
+        margin: 9px 7px 0 12px;
+        display: inline-block;
+      }
+    }
+    &:first-of-type {
+      &:after {
+        display: inline-block;
+      }
+    }
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+span#lp_sec_one_logo_title {
+  display: inline-block;
+  background: $color_bright_two;
+  padding: 9px 25px;
+  margin-top: 42px;
+  @include type(
+    (
+      size: $sec_one_logo_title_size,
+      spacing: $sec_one_logo_title_spacing,
+      family: $primaryfont,
+      color: $color_light_one,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    margin-top: 40px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 45px;
+    color: $sec_one_logo_title_color_small_laptop;
+    background: $sec_one_logo_title_bg_color_small_laptop;
+  }
+  @include mq(large_laptop) {
+    margin-top: 67px;
+  }
+  @include mq(small_monitor) {
+    margin-top: 62px;
+  }
+}
+
+#lp_sec_one_slider {
+  max-width: 245px;
+  margin: 20px auto 0px;
+  @include mq(small_tablet) {
+    margin: 40px auto 0px;
+    max-width: 630px;
+  }
+  @include mq(small_laptop) {
+    margin: 30px auto 0px;
+    @include flex(center);
+  }
+  @include mq(small_monitor) {
+    margin: 48px auto 0px;
+  }
+}
+
+.lp_sec_one_slide {
+  height: 40px;
+  @include mq(small_laptop) {
+    margin: 0 25px;
+  }
+  @include mq(large_laptop) {
+    margin: 0 30px;
+  }
+  &.three {
+    .lp_sec_one_slide_inner {
+      img {
+        height: 32px;
+        @include mq(small_monitor) {
+          height: 45px;
+        }
+      }
+    }
+  }
+  .lp_sec_one_slide_inner {
+    height: 100%;
+    @include flex(center, center);
+    @include mq(small_laptop) {
+      justify-content: flex-start;
+    }
+    svg,
+    img {
+      margin: auto;
+      @include image();
+      height: 25px;
+      @include mq(small_tablet) {
+        height: 27px;
+      }
+      @include mq(small_laptop) {
+        height: 27px;
+        margin: 0;
+      }
+      @include mq(small_monitor) {
+        height: 37px;
+      }
+      path,
+      polygon,
+      circle {
+        fill: $color_dark_seven;
+      }
+    }
+  }
+}

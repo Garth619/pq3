@@ -1,0 +1,37 @@
+////////////////////////////////////////////////////////////////////
+// PA Directory Page
+////////////////////////////////////////////////////////////////////
+
+// ul.pa_directory_top_menu li a
+
+$pa_directory_top_menu_size: 14px;
+$pa_directory_top_menu_size_small_tablet: 16px;
+$pa_directory_top_menu_size_small_monitor: 18px;
+
+$pa_directory_top_menu_spacing: 1.8px;
+
+$pa_directory_top_menu_height: 25px;
+$pa_directory_top_menu_height_small_tablet: 16px;
+$pa_directory_top_menu_height_small_monitor: 20px;
+
+$pa_directory_top_menu_weight: 600;
+
+// #pa_directory ul.pa_directory_top_menu>li div ul li
+
+$pa_directory_sub_menu_size: 14px;
+
+$pa_directory_sub_menu_height: 16px;
+
+$pa_directory_sub_menu_spacing: 0;
+
+$pa_directory_sub_menu_weight: 600;
+
+// #pa_directory ul.pa_directory_top_menu>li div ul li a
+
+$pa_directory_sub_menu_color: $color_dark_three;
+
+$pa_directory_sub_menu_border_bg_color: $color_dark_one;
+
+// #pa_directory ul.pa_directory_top_menu>li div ul li a:hover
+
+$pa_directory_sub_menu_border_bg_color_hover: $color_bright_two;

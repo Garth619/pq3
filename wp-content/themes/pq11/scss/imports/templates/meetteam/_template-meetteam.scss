@@ -1,0 +1,183 @@
+#meet_team_wrapper {
+  max-width: 420px;
+  margin: 0px auto -49px;
+  @include mq(small_tablet) {
+    margin: 0px auto -49px;
+    max-width: 820px;
+    @include flex(space-between, null, null, wrap);
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+  }
+  @include mq(large_laptop) {
+    margin: 0px auto -49px;
+    max-width: 1322px;
+  }
+  @include mq(small_monitor) {
+  }
+  &:after {
+    @include mq(small_laptop) {
+      content: "";
+      display: block;
+      flex-basis: 31%;
+    }
+    @include mq(large_laptop) {
+      flex-basis: 29%;
+    }
+  }
+}
+
+.single_att {
+  margin-bottom: 49px;
+  background: $single_att_bg_color;
+  text-align: center;
+  @include mq(small_tablet) {
+    flex-basis: 47%;
+  }
+  @include mq(small_laptop) {
+    flex-basis: 31%;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 31%;
+  }
+  &:hover {
+    a {
+      .single_att_title_wrapper {
+        span.single_att_name {
+          color: $single_att_color_hover;
+        }
+      }
+      .single_att_img {
+        img {
+          transform: scale(1.1);
+        }
+        .single_att_overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    .single_att_img {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transform: scale(1);
+        transition: 1200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+        @include image();
+      }
+      .single_att_overlay {
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.45);
+        transition: all 200ms ease-in-out;
+        @include box(100%);
+        @include abs(0, null, null, 0, 1);
+        @include flex(center, center);
+        &.placeholder_overlay {
+          background: $placeholder_overlay_bg_color;
+        }
+        span.view_profile {
+          @include type(
+            (
+              size: $view_profile_size,
+              spacing: $view_profile_spacing,
+              family: $primaryfont,
+              color: $view_profile_color,
+              weight: $view_profile_weight,
+              transform: uppercase,
+            )
+          );
+        }
+      }
+    }
+    .single_att_title_wrapper {
+      border-top: 2px solid $single_att_title_wrapper_border_bg_color;
+      padding: 25px;
+      span {
+        display: block;
+      }
+      span.single_att_name {
+        transition: all 200ms ease-in-out;
+        @include type(
+          (
+            size: $single_att_name_size,
+            height: $single_att_height,
+            family: $secondaryfont,
+            color: $single_att_color,
+            weight: $single_att_weight,
+          )
+        );
+        @include mq(small_tablet) {
+          @include quick_type(
+            $single_att_name_size_small_tablet,
+            $single_att_height_small_tablet,
+            null
+          );
+        }
+        @include mq(large_laptop) {
+          @include quick_type(
+            $single_att_name_size_large_laptop,
+            $single_att_height_large_laptop,
+            null
+          );
+        }
+      }
+      span.single_att_position {
+        margin-top: 5px;
+        @include type(
+          (
+            size: $single_att_position_size,
+            spacing: $single_att_position_spacing,
+            height: $single_att_position_height,
+            family: $primaryfont,
+            color: $single_att_position_color,
+            weight: $single_att_position_weight,
+            transform: uppercase,
+          )
+        );
+        @include mq(small_tablet) {
+          @include quick_type(
+            $single_att_position_size_small_tablet,
+            $single_att_position_height_small_tablet,
+            null
+          );
+        }
+      }
+    }
+  }
+}
+
+.placeholder {
+  position: relative;
+  text-align: center;
+  .placeholder_inner {
+    background: $placeholder_bg_color;
+    color: $placeholder_color;
+    padding: 0 25px;
+    position: relative;
+    @include abs(0, null, null, 0, 1);
+    @include box(100%);
+    @include flex(center, center, column);
+    @include type(
+      (
+        size: $placeholder_size,
+        spacing: $placeholder_spacing,
+        family: $primaryfont,
+        color: $placeholder_color,
+        weight: $placeholder_weight,
+        transform: uppercase,
+      )
+    );
+    &:before {
+      content: "Profile Coming Soon";
+      display: block;
+    }
+  }
+  img {
+    width: 100%;
+    @include image();
+  }
+}

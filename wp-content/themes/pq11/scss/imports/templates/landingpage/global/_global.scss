@@ -1,0 +1,81 @@
+#landing_page_wrapper {
+  width: 100%;
+  @include mq(tablet) {
+    @include flex();
+  }
+}
+
+#landing_page_left {
+  @include mq(tablet) {
+    flex-grow: 1;
+  }
+}
+
+#landing_page_content_wrapper {
+  margin-top: 126px;
+  @include mq(small_tablet) {
+    margin-top: 65px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 0px;
+  }
+}
+
+.lp_sec_header {
+  display: block;
+  margin-bottom: 25px;
+  @include type(
+    (
+      size: $sec_three_header_size,
+      height: $sec_three_header_height,
+      family: $secondaryfont,
+      color: $sec_three_header_color,
+      weight: 400,
+    )
+  );
+  @include mq(small_tablet) {
+    max-width: 650px;
+    margin: 0 0 37px;
+    @include quick_type(40px, 40px, null);
+  }
+  @include mq(small_laptop) {
+    @include quick_type(50px, 50px, null);
+  }
+  @include mq(large_laptop) {
+    max-width: 820px;
+    margin-bottom: 27px;
+    @include quick_type(60px, 60px, null);
+  }
+  @include mq(small_monitor) {
+    max-width: 950px;
+    margin-bottom: 40px;
+    @include quick_type(
+      $sec_three_header_size_small_monitor,
+      $sec_three_header_height_small_monitor,
+      null
+    );
+  }
+}
+
+.content.lp_content {
+  font-size: 14px;
+  line-height: 26px;
+  @include mq(small_laptop) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  h2 {
+    line-height: 24px;
+    @include mq(small_tablet) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    @include mq(small_laptop) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  h3 {
+    font-weight: 600;
+  }
+}

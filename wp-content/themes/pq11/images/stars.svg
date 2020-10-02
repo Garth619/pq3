@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.97 27.64">
+  <defs>
+    <style>
+      .cls-1-stars {
+        fill: #d82729;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g id="stars">
+        <path id="Path_23" data-name="Path 23" class="cls-1-stars" d="M14.12.51l3.57,10,10.56.32-8.36,6.46,3,10.14-8.73-5.95L5.4,27.38l3-10.14L0,10.78l10.56-.32Z"/>
+        <path id="Path_24" data-name="Path 24" class="cls-1-stars" d="M46.8.77l3.57,10L60.93,11l-8.36,6.46,3,10.15-8.73-6-8.73,6,3-10.15L32.68,11l10.56-.31Z"/>
+        <path id="Path_25" data-name="Path 25" class="cls-1-stars" d="M79.48.51l3.57,10,10.56.32-8.36,6.46,3,10.14-8.74-5.95-8.73,5.95,3-10.14-8.36-6.46,10.56-.32Z"/>
+        <path id="Path_26" data-name="Path 26" class="cls-1-stars" d="M112.16,0l3.57,10,10.56.32-8.36,6.46,3,10.14-8.73-5.95-8.73,5.95,3-10.14L98,10.27,108.6,10Z"/>
+        <path id="Path_27" data-name="Path 27" class="cls-1-stars" d="M144.84,0l3.57,10,10.56.32-8.36,6.46,3,10.14-8.73-5.95-8.73,5.95,3-10.14-8.36-6.46L141.28,10Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

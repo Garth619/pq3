@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.76 19.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path id="Facebook" class="cls-1" d="M1.89,3.73V6.39H0V9.64H1.89v9.64H5.78V9.64H8.39s.24-1.56.36-3.26h-3V4.16a.94.94,0,0,1,.85-.78H8.76V0H5.88C1.8,0,1.89,3.25,1.89,3.73Z"/>
+    </g>
+  </g>
+</svg>

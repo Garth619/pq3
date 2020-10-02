@@ -1,0 +1,385 @@
+// navigation - refer to the resize functions in js->custom-min.js
+
+nav {
+  display: none;
+  background: $nav_menu_bg_color;
+  text-align: center;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  @include box(100%);
+  @include fixed(127px, null, null, 0);
+  @include mq(small_tablet) {
+    top: 65px;
+  }
+  @include mq(tablet) {
+    display: flex !important;
+    height: 40px;
+    border-bottom: 3px solid $nav_menu_border_bg_color;
+    overflow-y: unset;
+    @include abs(87px, null, null, 0);
+    @include flex(null, center);
+  }
+  @include mq(large_laptop) {
+    height: 55px;
+    top: 92px;
+    border-bottom: 4px solid $nav_menu_border_bg_color;
+  }
+  @include mq(small_monitor) {
+    top: 139px;
+  }
+  .menu-header {
+    margin-top: 20px;
+    @include mq(tablet) {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+nav {
+  ul.menu {
+    padding-bottom: 200px;
+    @include mq(tablet) {
+      max-width: 1050px;
+      padding-bottom: 0;
+      @include margin_lr;
+      @include flex(space-between);
+    }
+    @include mq(large_laptop) {
+      max-width: 1225px;
+    }
+    @include mq(small_monitor) {
+      max-width: 1500px;
+    }
+    li {
+      padding: 15px 20px;
+      @include type(
+        (
+          size: $nav_menu_size,
+          spacing: $nav_menu_spacing,
+          height: $nav_menu_height,
+          family: $primaryfont,
+          transform: uppercase,
+        )
+      );
+      @include mq(small_tablet) {
+        padding: 18px 20px;
+        @include quick_type(
+          $nav_menu_size_small_tablet,
+          $nav_menu_height_small_tablet,
+          $nav_menu_spacing_small_tablet
+        );
+      }
+      @include mq(tablet) {
+        padding: 0;
+        @include quick_type(
+          $nav_menu_size_tablet,
+          $nav_menu_height_tablet,
+          $nav_menu_spacing_tablet
+        );
+      }
+      @include mq(large_laptop) {
+        @include quick_type(
+          $nav_menu_size_large_laptop,
+          $nav_menu_height_large_laptop,
+          $nav_menu_spacing_large_laptop
+        );
+      }
+      @include mq(small_monitor) {
+        @include quick_type(
+          $nav_menu_size_small_monitor,
+          $nav_menu_height_small_monitor,
+          $nav_menu_spacing_small_monitor
+        );
+      }
+      a {
+        color: $nav_menu_color;
+        transition: all 200ms ease-in-out;
+        @include mq(tablet) {
+          padding-bottom: 20px;
+          &:hover {
+            color: $nav_menu_color_hover_tablet;
+          }
+        }
+        @include mq(large_laptop) {
+          padding-bottom: 25px;
+        }
+      }
+    }
+    li.menu-item-has-children {
+      background: transparent;
+      box-shadow: none;
+      transition: all 200ms ease-in-out;
+      position: relative;
+      &:hover {
+        @include mq(tablet) {
+          > a {
+            color: $nav_menu_item_has_children_color_hover;
+            &:after {
+              @include mq(tablet) {
+                @include tri(
+                  down,
+                  3px,
+                  3px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
+              }
+              @include mq(large_laptop) {
+                @include tri(
+                  down,
+                  4px,
+                  5px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
+              }
+              @include mq(small_monitor) {
+                @include tri(
+                  down,
+                  5px,
+                  6px,
+                  $nav_menu_item_has_children_tri_color_hover
+                );
+              }
+            }
+          }
+          ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      &.active {
+        margin-bottom: 15px;
+        background: $nav_menu_item_has_children_active_bg_color;
+        box-shadow: 0px 3px 10px #0000001a;
+        @include mq(small_tablet) {
+          margin-bottom: 8px;
+        }
+        @include mq(tablet) {
+          background: none;
+          box-shadow: none;
+        }
+      }
+      > a {
+        position: relative;
+        &.active {
+          color: $nav_menu_item_has_children_active_link_color;
+          &:after {
+            @include tri(
+              down,
+              3px,
+              3px,
+              $nav_menu_item_has_children_active_tri_color
+            );
+          }
+        }
+        &:after {
+          vertical-align: top;
+          transition: all 200ms ease-in-out;
+          @include contentdisplay(inline-block);
+          @include abs(6px, -15px, null, null);
+          @include tri(down, 3px, 3px, $nav_menu_item_has_children_tri_color);
+          @include mq(small_tablet) {
+            @include abs(7px, -15px, null, null);
+          }
+          @include mq(tablet) {
+            top: 5px;
+          }
+          @include mq(large_laptop) {
+            right: -12px;
+            @include tri(down, 4px, 5px, $nav_menu_item_has_children_tri_color);
+          }
+          @include mq(small_monitor) {
+            top: 7px;
+            right: -15px;
+            @include tri(down, 5px, 6px, $nav_menu_item_has_children_tri_color);
+          }
+        }
+        &:hover {
+          &:after {
+            @include mq(tablet) {
+              @include tri(
+                down,
+                3px,
+                3px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
+            }
+            @include mq(large_laptop) {
+              @include tri(
+                down,
+                4px,
+                5px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
+            }
+            @include mq(small_monitor) {
+              @include tri(
+                down,
+                5px,
+                6px,
+                $nav_menu_item_has_children_tri_color_hover
+              );
+            }
+          }
+        }
+      }
+    }
+    li.current-menu-ancestor {
+      > a {
+        color: $nav_current_menu_ancestor_link_color;
+        &:after {
+          @include tri(down, 3px, 3px, $nav_current_menu_ancestor_tri_color);
+
+          @include mq(large_laptop) {
+            @include tri(down, 4px, 5px, $nav_current_menu_ancestor_tri_color);
+          }
+          @include mq(small_monitor) {
+            @include tri(down, 5px, 6px, $nav_current_menu_ancestor_tri_color);
+          }
+        }
+      }
+    }
+    li.current-menu-item {
+      > a {
+        color: $nav_current_menu_item_link_color;
+      }
+    }
+  }
+}
+
+nav {
+  ul.sub-menu {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease-in-out;
+    &.active {
+      max-height: 3000px;
+      opacity: 1;
+      visibility: visible;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    @include mq(small_tablet) {
+      padding-bottom: 8px;
+    }
+    @include mq(tablet) {
+      display: block !important;
+      background: $nav_sub_menu_bg_color;
+      width: 184px;
+      box-shadow: 0px 3px 10px #0000001a;
+      padding: 5px 17px 8px;
+      max-height: none;
+      opacity: 0;
+      visibility: hidden;
+      text-align: left;
+      @include abs(27px, null, null, -15px);
+    }
+    @include mq(large_laptop) {
+      width: 219px;
+      padding: 8px 30px 8px;
+      top: 36px;
+      left: 0;
+    }
+    @include mq(small_monitor) {
+      width: 256px;
+      top: 37px;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      @include type(
+        (
+          spacing: 0,
+          height: normal,
+          transform: capitalize,
+        )
+      );
+      @include mq(small_tablet) {
+        @include quick_type(
+          $nav_sub_menu_size_small_tablet,
+          $nav_sub_menu_height_small_tablet,
+          null
+        );
+      }
+      @include mq(tablet) {
+        @include quick_type(
+          $nav_sub_menu_size_tablet,
+          $nav_sub_menu_height_tablet,
+          null
+        );
+      }
+      @include mq(large_laptop) {
+        @include quick_type(
+          $nav_sub_menu_size_large_laptop,
+          $nav_sub_menu_height_large_laptop,
+          null
+        );
+      }
+      @include mq(small_monitor) {
+        @include quick_type(
+          $nav_sub_menu_size_small_monitor,
+          $nav_sub_menu_height_small_monitor,
+          null
+        );
+      }
+      &:last-of-type {
+        a {
+          border: none;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      a {
+        padding: 15px 0 0;
+        display: block;
+        transition: all 150ms ease-in-out;
+        @include mq(small_tablet) {
+          padding: 12px 0 0;
+        }
+        @include mq(tablet) {
+          padding: 12px 10px;
+          border-bottom: 1px solid $nav_sub_menu_border_color;
+        }
+        @include mq(large_laptop) {
+          padding: 12px 0px;
+        }
+        &:hover {
+          color: $nav_sub_menu_link_color;
+        }
+        &:after {
+          @include contentdisplay();
+          width: 122px;
+          height: 1px;
+          margin: 15px auto 0;
+          background: $nav_sub_menu_border_color;
+          transition: all 150ms ease-in-out;
+          @include mq(small_tablet) {
+            width: 255px;
+          }
+          @include mq(tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+    li.current-menu-item {
+      a {
+        color: $nav_sub_menu_current_menu_item_color;
+      }
+    }
+  }
+}

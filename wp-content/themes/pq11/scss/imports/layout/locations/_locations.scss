@@ -1,0 +1,245 @@
+#locations {
+  text-align: center;
+  padding-bottom: 65px;
+  @include mq(small_tablet) {
+    padding: 0 60px;
+    max-width: 758px;
+    text-align: left;
+    @include margin_lr;
+    @include flex(space-between);
+  }
+  @include mq(small_laptop) {
+    max-width: 1030px;
+  }
+  @include mq(large_laptop) {
+    max-width: 1340px;
+  }
+  @include mq(small_monitor) {
+    max-width: 1485px;
+  }
+}
+
+.loc_col {
+  margin-bottom: 55px;
+  &:nth-of-type(1) {
+    @include mq(small_tablet) {
+      order: 2;
+    }
+    @include mq(large_laptop) {
+      flex-basis: 325px;
+      margin-left: 80px;
+      br {
+        &:first-of-type {
+          @include mq(large_laptop) {
+            display: none;
+          }
+        }
+      }
+    }
+    @include mq(small_monitor) {
+      margin-left: 152px;
+    }
+  }
+  &:nth-of-type(2) {
+    @include mq(small_tablet) {
+      order: 3;
+      flex-basis: 214px;
+    }
+    @include mq(large_laptop) {
+      flex-basis: 314px;
+    }
+  }
+  &:nth-of-type(3) {
+    @include mq(small_tablet) {
+      order: 1;
+      margin-right: 10px;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  span {
+    display: block;
+    color: $color_light_one;
+    @include margin_lr;
+  }
+  span.double_line {
+    width: 78px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include margin_lr;
+    @include mq(small_tablet) {
+      width: 62px;
+      margin-top: 18px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include mq(small_laptop) {
+      margin-bottom: 12px;
+    }
+    @include mq(large_laptop) {
+      margin-bottom: 20px;
+    }
+    @include mq(small_monitor) {
+      margin-bottom: 27px;
+    }
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
+}
+
+span.loc_title {
+  @include type(
+    (
+      size: $loc_title_size,
+      spacing: $loc_title_spacing,
+      family: $primaryfont,
+      weight: $loc_title_weight,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    font-size: $loc_title_size_small_tablet;
+  }
+  @include mq(large_laptop) {
+    font-size: $loc_title_size_large_laptop;
+  }
+  @include mq(small_monitor) {
+    font-size: $loc_title_size_small_monitor;
+  }
+  &.connect_title {
+    margin-top: 45px;
+  }
+}
+
+span.address {
+  max-width: 175px;
+  @include mq(large_laptop) {
+    max-width: 100%;
+  }
+}
+
+span.loc_cta {
+  max-width: 242px;
+  @include mq(large_laptop) {
+    max-width: 100%;
+  }
+}
+
+.loc_descrip {
+  @include type(
+    (
+      size: $loc_descrip_size,
+      height: $loc_descrip_height,
+      family: $secondaryfont,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(
+      $loc_descrip_size_small_tablet,
+      $loc_descrip_height_small_tablet,
+      null
+    );
+  }
+  @include mq(large_laptop) {
+    @include quick_type(
+      $loc_descrip_size_large_laptop,
+      $loc_descrip_height_large_laptop,
+      null
+    );
+  }
+  @include mq(small_monitor) {
+    @include quick_type(
+      $loc_descrip_size_small_monitor,
+      $loc_descrip_height_small_monitor,
+      null
+    );
+  }
+}
+
+a.loc_phone {
+  @include type(
+    (
+      color: $loc_phone_color,
+    )
+  );
+}
+
+a.get_directions {
+  border: 1px solid $get_directions_border_bg_color;
+  border-radius: 45px;
+  display: inline-block;
+  padding: 12px 20px;
+  transition: all 200ms ease-in-out;
+  margin-top: 24px;
+  @include type(
+    (
+      size: $get_directions_size,
+      spacing: $get_directions_spacing,
+      family: $primaryfont,
+      weight: $get_directions_weight,
+      color: $get_directions_color,
+      transform: uppercase,
+    )
+  );
+  @include mq(small_tablet) {
+    margin-top: 30px;
+    padding: 14px 20px;
+  }
+  @include mq(small_laptop) {
+    margin-top: 20px;
+  }
+  @include mq(large_laptop) {
+    font-size: $get_directions_size_large_laptop;
+    border: 2px solid $get_directions_border_bg_color_large_laptop;
+  }
+  @include mq(small_monitor) {
+    margin-top: 30px;
+    padding: 16px 29px;
+    font-size: $get_directions_size_small_monitor;
+  }
+  &:hover {
+    background: $get_directions_border_bg_color_hover;
+    color: $get_directions_color_hover;
+  }
+}
+
+.social_media {
+  @include flex(center);
+  @include mq(small_tablet) {
+    justify-content: flex-start;
+  }
+  a {
+    margin: 0 10px;
+    @include mq(small_tablet) {
+      margin: 0 15px 0 0;
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $social_media_bg_color_hover;
+        }
+      }
+    }
+    svg {
+      height: 19px;
+      width: 18px;
+      @include mq(small_tablet) {
+        height: 16px;
+      }
+      @include mq(large_laptop) {
+        height: 18px;
+      }
+      @include mq(small_monitor) {
+        height: 23px;
+        width: 22px;
+      }
+      path {
+        fill: $social_media_bg_color;
+        transition: all 200ms ease-in-out;
+      }
+    }
+  }
+}

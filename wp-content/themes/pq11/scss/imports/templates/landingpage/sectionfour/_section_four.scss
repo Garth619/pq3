@@ -1,0 +1,260 @@
+html.webp {
+  #lp_section_four {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #lp_section_four {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
+#lp_section_four {
+  position: relative;
+  padding: 40px 0 23px;
+  @include mq(small_tablet) {
+    padding: 40px 0 35px;
+  }
+  @include mq(small_laptop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include mq(small_monitor) {
+    padding: 55px 0 35px;
+  }
+  &:after {
+    background-size: (500px, 500px);
+    opacity: 0.53;
+    @include abs(0, null, null, 0);
+    @include box(100%, 100%);
+    @include contentdisplay();
+  }
+}
+
+#lp_sec_four_inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  > span.double_line {
+    max-width: 130px;
+    margin: 10px auto 0;
+    @include mq(small_tablet) {
+      margin: 34px auto 0;
+      max-width: 135px;
+    }
+    @include mq(large_laptop) {
+      max-width: 225px;
+      margin: 44px auto 0;
+    }
+    &:before,
+    &:after {
+      background: $color_bright_one;
+    }
+  }
+}
+
+span#lp_sec_four_title {
+  @include type(
+    (
+      size: 30px,
+      height: 45px,
+      spacing: 0,
+      family: $secondaryfont,
+      color: $color_dark_three,
+      weight: 500,
+    )
+  );
+  @include mq(small_tablet) {
+    @include quick_type(40px, 45px, null);
+  }
+  @include mq(large_laptop) {
+    font-size: 50px;
+  }
+  @include mq(small_monitor) {
+    font-size: 60px;
+  }
+}
+
+#lp_sec_four_slider {
+  max-width: 340px;
+  margin: 35px auto 0;
+  @include mq(small_tablet) {
+    max-width: 570px;
+    margin: 6px auto 0;
+  }
+  @include mq(small_laptop) {
+    max-width: 100%;
+    margin: 49px auto 0;
+    @include flex(space-between);
+  }
+  @include mq(small_monitor) {
+    max-width: 1330px;
+    @include margin_lr;
+  }
+  .slick-slide {
+    margin: 0 10px;
+    padding: 10px 0;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+  .slick-dots {
+    position: static;
+    margin: 10px 0 0 0;
+    @include mq(small_tablet) {
+      margin-top: 18px;
+    }
+    li.slick-active {
+      button {
+        &:before {
+          color: $sec_two_bullet_bg_color_hover;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $sec_two_bullet_bg_color_hover;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 15px;
+      button {
+        width: 15px;
+        &:before {
+          width: 15px;
+          opacity: 1;
+          color: #bcbcbc;
+          font-size: $sec_two_bullet_size;
+        }
+      }
+    }
+  }
+}
+
+.lp_sec_four_slide {
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  @include mq(small_tablet) {
+    padding: 36px 0 0px 0;
+  }
+  @include mq(small_laptop) {
+    flex-basis: 32%;
+    flex-shrink: 0;
+    padding: 39px 0 0px 0;
+    background: transparent;
+    box-shadow: none;
+    &:hover {
+      background: $sec_two_slide_bg_color;
+      box-shadow: 0px 3px 10px #0000001a;
+    }
+  }
+  @include mq(large_laptop) {
+  }
+  @include mq(small_monitor) {
+    padding: 75px 0 0px 0;
+  }
+  img {
+    filter: drop-shadow(0px 7px 1px rgba(0, 0, 0, 0.1));
+    @include margin_lr;
+    @include image();
+    height: 42px;
+    @include mq(small_tablet) {
+    }
+    @include mq(small_laptop) {
+      height: 45px;
+    }
+    @include mq(large_laptop) {
+      height: 53px;
+    }
+    @include mq(small_monitor) {
+      height: 62px;
+    }
+  }
+  span {
+    display: block;
+    &.amount {
+      margin-top: 15px;
+      margin-bottom: 29px;
+      @include type(
+        (
+          size: $sec_two_span_size,
+          family: $secondaryfont,
+          color: $sec_two_span_color,
+          weight: $sec_two_span_weight,
+          transform: uppercase,
+        )
+      );
+      @include mq(small_tablet) {
+        font-size: 55px;
+        margin-top: 33px;
+      }
+      @include mq(small_laptop) {
+        margin-top: 34px;
+        font-size: 65px;
+      }
+      @include mq(large_laptop) {
+        font-size: 75px;
+        margin-top: 52px;
+      }
+      @include mq(small_monitor) {
+        font-size: 90px;
+        margin-top: 38px;
+        margin-bottom: 24px;
+      }
+    }
+    &.double_line {
+      max-width: 55px;
+      @include margin_lr;
+      &:before,
+      &:after {
+        background: $color_bright_one;
+      }
+    }
+    &.type {
+      margin: 10px auto 0;
+      padding-bottom: 4px;
+      max-width: 147px;
+      @include type(
+        (
+          size: $sec_two_span_type_size,
+          family: $primaryfont,
+          height: 23px,
+          color: $sec_two_span_type_color,
+          transform: lowercase,
+        )
+      );
+      @include mq(small_tablet) {
+        margin: 30px auto 0;
+      }
+      @include mq(small_laptop) {
+        margin: 35px auto 0;
+        max-width: 198px;
+        padding-bottom: 35px;
+        @include quick_type(16px, 23px, null);
+      }
+      @include mq(large_laptop) {
+        margin: 26px auto 0;
+        max-width: 209px;
+        @include quick_type(18px, 23px, null);
+      }
+      @include mq(small_monitor) {
+        max-width: 201px;
+        margin: 35px auto 0;
+        padding-bottom: 95px;
+        @include quick_type(
+          $sec_two_span_type_size_small_monitor,
+          $sec_two_span_type_height_small_monitor,
+          null
+        );
+      }
+    }
+  }
+}

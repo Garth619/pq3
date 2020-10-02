@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////
+// Header
+////////////////////////////////////////////////////////////////////
+
+// header
+
+$header_bg_color: $color_light_one;
+
+// #header_right
+
+$header_right_bg_color: $color_dark_six;
+$header_right_bg_color_small_tablet: $color_light_one;
+
+// #header_right.open
+
+$header_right_bg_color_open: $color_dark_three;
+
+// #header_right .header_title_wrapper span,a
+
+$header_title_wrapper_color: $color_dark_three;
+
+// #header_right.open .header_title_wrapper span,a
+
+$header_title_wrapper_color_open: $color_light_one;
+
+$header_title_wrapper_color_open_small_tablet: $color_dark_three;
+
+// #menu_wrapper
+
+$menu_wrapper_bg_color: $color_bright_two;
+
+// #menu_wrapper span
+
+$menu_wrapper_span_bg_color: $color_light_one;
+
+// span.header_title_sml
+
+$header_title_sml_size: 12px;
+$header_title_sml_size_small_tablet: 11px;
+$header_title_sml_size_small_monitor: 15px;
+
+$header_title_sml_height_small_tablet: 13px;
+$header_title_sml_height_small_monitor: 17px;
+
+$header_title_sml_spacing: 1.2px;
+
+// span.header_title_lrg
+
+$header_title_lrg_size: 16px;
+$header_title_lrg_size_tablet: 15px;
+$header_title_lrg_size_large_laptop: 16px;
+$header_title_lrg_size_small_monitor: 23px;
+
+$header_title_lrg_height_tablet: 17px;
+$header_title_lrg_height_large_laptop: 17px;
+$header_title_lrg_height_small_monitor: 30px;
+
+$header_title_lrg_spacing: 0.8px;
+
+$header_title_lrg_weight: 700;
