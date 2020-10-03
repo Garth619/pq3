@@ -27,6 +27,9 @@ header {
       @include mq(small_tablet) {
         margin: 0;
       }
+      @include mq(small_laptop) {
+        max-width: 290px;
+      }
       g.color-change {
         path {
           fill: $color_light_one;
@@ -53,6 +56,11 @@ header {
   @include mq(small_tablet) {
     text-align: right;
   }
+  @include mq(small_laptop) {
+    height: 100%;
+    padding-right: 28px;
+    @include flex(flex-end, center, row);
+  }
   span {
     @include type(
       (
@@ -65,6 +73,10 @@ header {
         transform: uppercase,
       )
     );
+    @include mq(small_laptop) {
+      margin-top: 9px;
+      margin-right: 12px;
+    }
   }
   a {
     @include type(
@@ -82,6 +94,9 @@ header {
   background: $color_bright_two;
   @include box(66px, 60px);
   @include flex(center, center, column);
+  @include mq(small_laptop) {
+    display: none;
+  }
   span {
     display: block;
     background: $color_light_one;
