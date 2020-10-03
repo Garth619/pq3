@@ -6,21 +6,33 @@ header {
 }
 
 #header-inner {
+  @include mq(small_tablet) {
+    @include flex();
+  }
 }
 
 #header-left {
   width: 100%;
   background: $color_dark_two;
   padding: 12px 25px;
+  @include mq(small_tablet) {
+    background: $color_light_one;
+  }
   a {
     display: block;
     svg {
       display: block;
       max-width: 230px;
       @include margin_lr;
+      @include mq(small_tablet) {
+        margin: 0;
+      }
       g.color-change {
         path {
           fill: $color_light_one;
+          @include mq(small_tablet) {
+            fill: $color_dark_one;
+          }
         }
       }
     }
@@ -38,6 +50,9 @@ header {
   padding: 0 12px;
   flex-grow: 1;
   @include flex(center, null, column);
+  @include mq(small_tablet) {
+    text-align: right;
+  }
   span {
     @include type(
       (
@@ -66,6 +81,14 @@ header {
 #menu-wrapper {
   background: $color_bright_two;
   @include box(66px, 60px);
+  @include flex(center, center, column);
   span {
+    display: block;
+    background: $color_light_one;
+    margin-bottom: 5px;
+    @include box(25px, 2px);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
