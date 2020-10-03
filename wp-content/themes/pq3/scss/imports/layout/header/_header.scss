@@ -30,11 +30,42 @@ header {
 #header-right {
   width: 100%;
   height: 60px;
+  @include flex();
 }
 
 #cta-wrapper {
   height: 100%;
+  padding: 0 12px;
+  flex-grow: 1;
   @include flex(center, null, column);
+  span {
+    @include type(
+      (
+        size: 12px,
+        height: 15px,
+        spacing: 1.2px,
+        family: $primaryfont,
+        color: $color_bright_two,
+        weight: 900,
+        transform: uppercase,
+      )
+    );
+  }
+  a {
+    @include type(
+      (
+        size: 27px,
+        height: 29px,
+        family: $secondaryfont,
+        color: $color_bright_two,
+      )
+    );
+  }
+}
+
+#menu-wrapper {
+  background: $color_bright_two;
+  @include box(66px, 60px);
   span {
   }
 }

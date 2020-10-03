@@ -112,6 +112,14 @@
 		 
 		 </div><!-- cta-wrapper -->
 
+		 <div id='menu-wrapper'>
+		 
+			 <span></span>
+			 <span></span>
+			 <span></span>
+		 
+		 </div><!-- menu-wrapper -->
+
 		 <nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
 	 
 	 </div><!-- header-right -->
