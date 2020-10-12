@@ -3,10 +3,21 @@
 Plugin Name: iLawyer Alert Bar
 Plugin URI: https://www.ilawyermarketing.com/
 Description: iLawyer Alert Bar positioned at the top of pages sitewide
-Version: 1.06
+Version: 1.0.9
 Author: Randy Savage, Derrick Tran, Michael Sorenson & Ruggy
 */
 
+
+if(is_admin()){
+    include 'admin/updater.php';
+
+    $updater = new My_Updater(__FILE__);
+
+    $updater->set_username('1point21interactive');
+    $updater->set_repository('1p21-alertbar');
+    $updater->authorize('60a32f5e4c9f5834f1a25ba2b4336aa59c57b85f');
+    $updater->initialize();
+}
 
 /* Check if ACF Pro is installed */
 register_activation_hook( __FILE__, 'onep21_alertbar_activate' );

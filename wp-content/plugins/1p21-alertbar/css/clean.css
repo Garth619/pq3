@@ -4,7 +4,9 @@
     background: #012f62;
     color: #fff;
     padding: 15px 20px 5px;
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     z-index: 99999;
 }
 
